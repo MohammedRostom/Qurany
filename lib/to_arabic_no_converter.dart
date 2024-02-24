@@ -3,8 +3,8 @@ library arabic_numbers;
 class _ArabicNumbers {
   static String convert(Object value) {
     assert(
-    value is int || value is String,
-    "The value object must be of type 'int' or 'String'.",
+      value is int || value is String,
+      "The value object must be of type 'int' or 'String'.",
     );
 
     if (value is int) {
@@ -30,28 +30,12 @@ class _ArabicNumbers {
 }
 
 extension IntExtensions on int {
-  /// Converts English numbers to the Arabic numbers format
-  ///
-  ///
-  /// Example:
-  /// ```dart
-  /// final arabicNumbers = 0123456789.toArabicNumbers;
-  /// // result: ٠١٢٣٤٥٦٧٨٩
-  /// ```
   String get toArabicNumbers {
     return _ArabicNumbers.convert(this);
   }
 }
 
 extension StringExtensions on String {
-  /// Converts English numbers to the Arabic numbers format
-  ///
-  ///
-  /// Example:
-  /// ```dart
-  /// final arabicNumbers = '0123456789'.toArabicNumbers;
-  /// // result: ٠١٢٣٤٥٦٧٨٩
-  /// ```
   String get toArabicNumbers {
     return _ArabicNumbers.convert(this);
   }
