@@ -28,9 +28,5 @@ El Quran El Kareem app is open-source  app for Android & ios. It is built with D
 
 
 
-| View One                                     | View Two  Page                               |
-|----------------------------------------------|----------------------------------------------|
-| <img src="snapshot/viewone.jpg" width="400"> | <img src="snapshot/viewtwo.jpg" width="400"> |
-
 
 
