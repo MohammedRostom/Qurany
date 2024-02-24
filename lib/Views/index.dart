@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'mydrawer.dart';
-import 'surah_builder.dart';
-import 'constant.dart';
-import 'package:ytquran/arabic_sura_number.dart';
+import 'package:ytquran/Views/widgets/surah_builder.dart';
+import '../constant.dart';
+import 'package:ytquran/Views/arabic_sura_number.dart';
+
+import 'widgets/mydrawer.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _IndexPageState extends State<IndexPage> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Go to bookmark',
         child: const Icon(Icons.bookmark),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.brown,
         onPressed: () async {
           fabIsClicked = true;
           if (await readBookmark() == true) {
@@ -36,24 +37,23 @@ class _IndexPageState extends State<IndexPage> {
         },
       ),
       appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          //"القرآن",
-          "Quran",
-          style: TextStyle(
-              //fontFamily: 'quran',
-              fontSize: 35,
-              fontWeight: FontWeight.bold,
-              shadows: [
-                Shadow(
-                  offset: Offset(1, 1),
-                  blurRadius: 2.0,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                ),
-              ]),
-        ),
-        backgroundColor: const Color.fromARGB(255, 56, 115, 59),
-      ),
+          centerTitle: true,
+          title: const Text(
+            //"القرآن",
+            "Quran",
+            style: TextStyle(
+                //fontFamily: 'quran',
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                shadows: [
+                  Shadow(
+                    offset: Offset(1, 1),
+                    blurRadius: 2.0,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ]),
+          ),
+          backgroundColor: Colors.brown),
       body: FutureBuilder(
         future: readJson(),
         builder: (
